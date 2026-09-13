@@ -3,7 +3,7 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { bacaKeranjang } from "@/lib/cart";
 import { formatRupiah } from "@/lib/rupiah";
-import { buatPesanan } from "./actions";
+import TombolBuatPesanan from "./TombolBuatPesanan";
 
 export default async function CheckoutPage() {
   // 1. Wajib login
@@ -60,14 +60,7 @@ export default async function CheckoutPage() {
         <span>{formatRupiah(total)}</span>
       </div>
 
-      <form action={buatPesanan} className="mt-6">
-        <button
-          type="submit"
-          className="w-full rounded-lg bg-blue-600 py-3 font-semibold text-white hover:bg-blue-700"
-        >
-          Buat Pesanan
-        </button>
-      </form>
+      <TombolBuatPesanan />
     </main>
   );
 }

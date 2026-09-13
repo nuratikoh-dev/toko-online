@@ -5,7 +5,10 @@ import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { bacaKeranjang, simpanKeranjang } from "@/lib/cart";
 
-export async function buatPesanan() {
+type FormState = { error?: string } | undefined;
+
+// dipakai lewat useActionState, jadi argumen pertama adalah state sebelumnya
+export async function buatPesanan(prevState: FormState) {
   // 1. Wajib login
   const session = await auth();
   if (!session) {
