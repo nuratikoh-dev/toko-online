@@ -27,8 +27,10 @@ export default function HalamanTambahProduk() {
         <div>
           <label className="mb-1 block font-medium">Harga (Rp)</label>
           <input
-            type="number"
+            type="text"
+            inputMode="numeric"
             name="price"
+            placeholder="50.000"
             required
             className="w-full rounded border p-2"
           />
@@ -37,7 +39,8 @@ export default function HalamanTambahProduk() {
         <div>
           <label className="mb-1 block font-medium">Stok</label>
           <input
-            type="number"
+            type="text"
+            inputMode="numeric"
             name="stock"
             required
             className="w-full rounded border p-2"

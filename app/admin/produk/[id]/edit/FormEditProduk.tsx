@@ -28,7 +28,8 @@ export default function FormEditProduk({
       <div>
         <label className="mb-1 block font-medium">Harga (Rp)</label>
         <input
-          type="number"
+          type="text"
+          inputMode="numeric"
           name="price"
           defaultValue={produk.price}
           required
@@ -39,7 +40,8 @@ export default function FormEditProduk({
       <div>
         <label className="mb-1 block font-medium">Stok</label>
         <input
-          type="number"
+          type="text"
+          inputMode="numeric"
           name="stock"
           defaultValue={produk.stock}
           required
