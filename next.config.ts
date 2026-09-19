@@ -8,7 +8,18 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "placehold.co",
       },
+      {
+        // gambar produk yang diunggah ke Vercel Blob
+        protocol: "https",
+        hostname: "**.public.blob.vercel-storage.com",
+      },
     ],
+  },
+  experimental: {
+    serverActions: {
+      // default 1MB terlalu kecil untuk foto dari HP
+      bodySizeLimit: "5mb",
+    },
   },
 };
 
